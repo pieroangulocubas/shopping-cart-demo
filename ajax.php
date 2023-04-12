@@ -52,16 +52,16 @@ switch($action){
         <table class="table">
           <tr>
             <th  class="align-middle">Subtotal</th>
-            <td class="text-end">$250.50</td>
+            <td class="text-end">'.format_currency(get_cart()["cart_totals"]["subtotal"]).'</td>
           </tr>
           <tr>
             <th  class="align-middle">Envio</th>
-            <td class="text-end text-danger">$50.00</td>
+            <td class="text-end text-danger">'.format_currency(get_cart()["cart_totals"]["shipment"]).'</td>
           </tr>
           <tr>
             <th class="align-middle">Total</th>
             <td class="text-end text-xl align-middle">
-              <h3 class="fw-bold text-success">$200.50</h3>
+              <h3 class="fw-bold text-success">'.format_currency(get_cart()["cart_totals"]["total"]).'</h3>
             </td>
           </tr>
         </table>
